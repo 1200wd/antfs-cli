@@ -55,9 +55,13 @@ setup(name='antfs-cli',
                    'License :: OSI Approved :: MIT License',
                    'Programming Language :: Python :: 2.7',
                    'Programming Language :: Python :: 3.3',
-                   'Programming Language :: Python :: 3.4'],
+                   'Programming Language :: Python :: 3.4',
+                   'Programming Language :: Python :: 3.5'],
 
-      dependency_links=['git+https://github.com/Tigge/openant.git#egg=openant-0.3'], 
+      dependency_links=['git+https://github.com/Tigge/openant.git#egg=openant-0.3'],
       install_requires=['openant>=0.3'],
+      extras_require={
+          'upload': ['garmin-uploader'],
+      },
 
       test_suite='tests')
